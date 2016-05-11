@@ -1,0 +1,1 @@
+while (in.hasNext() != -1){symbol = in.read();if (symbol == '{'){out.write("{"+"\n" + "    ");count1++;} else  if (symbol == '}'){out.write("\n" + "    " + "}");count2++;} else if (symbol == ';') {out.write(";"+"\n" + "    ");} else out.write(""+symbol);}
