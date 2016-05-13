@@ -3,7 +3,7 @@ package it.sevenbits.packages.writer;
 /**
  * StringWriter class
  */
-public class StringWriter implements IWriter {
+public class StringWriter implements   IWriter, IGetString {
 
     /**
      *
@@ -39,7 +39,7 @@ public class StringWriter implements IWriter {
     /**
      *
      */
-    public String get(){
+    public String getString() {
         return stringStream;
     };
 }

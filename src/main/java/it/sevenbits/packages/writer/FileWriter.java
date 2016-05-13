@@ -54,7 +54,4 @@ public class FileWriter implements IWriter {
         }
     }
 
-    public String get() {
-        return "";
-    };
 }
