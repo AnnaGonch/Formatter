@@ -4,7 +4,6 @@ package it.sevenbits.packages.writer;
  * StringWriter class
  */
 public class StringWriter implements   IWriter, IGetString {
-
     /**
      *
      */
@@ -15,9 +14,9 @@ public class StringWriter implements   IWriter, IGetString {
      * constructor
      */
     public StringWriter() {
+
         str = new StringBuilder();
     }
-
 
     /**
      *
@@ -37,7 +36,7 @@ public class StringWriter implements   IWriter, IGetString {
     }
 
     /**
-     *
+     * getString method return string
      */
     public String getString() {
         return stringStream;

@@ -10,10 +10,6 @@ import it.sevenbits.packages.writer.FileWriter;
 import it.sevenbits.packages.writer.IWriter;
 import it.sevenbits.packages.writer.StringWriter;
 import it.sevenbits.packages.writer.WriterException;
-
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  *
  */
@@ -22,7 +18,6 @@ final class Main {
      *
      */
     private Main(){}
-
     /**
      *
      * @param args string array
@@ -31,43 +26,17 @@ final class Main {
      * @throws FormatException exception
      */
     public static void main(final String[] args) throws ReaderException, WriterException, FormatException {
-
-
-
-        IReader inString = new StringReader("while(){param};if(){};");
-        IWriter outString = new FileWriter("OutString.txt");
-
-
-        IWriter out  = new StringWriter();
-
+        IReader inString = new StringReader("if(){if(){ if(){param}}if(){}");
+        StringWriter outString = new StringWriter();
         IReader inFile = new FileReader("file.txt");
         IWriter outFile = new FileWriter("OUTfile.txt");
-
-        Map<Character, String> tableSymbol = new HashMap<Character, String>();
-        tableSymbol.put('{', "{" + "\n" + "    ");
-        tableSymbol.put('}', "\n" + "    " + "}");
-        tableSymbol.put(';', ";" + "\n" + "    ");
-        tableSymbol.put('(', " " + "(");
-        tableSymbol.put(')', ")" + " ");
-        tableSymbol.put('=', " " + "=" + " ");
-        tableSymbol.put('+', " " + "+" + " ");
-        tableSymbol.put('-', " " + "-" + " ");
-
-
-
         Formatter formatter = new Formatter();
-        formatter.format(inString, outString, tableSymbol);
-        formatter.format(inFile, outFile, tableSymbol);
-        
-
+        formatter.format(inString, outString);
+        System.out.println(outString.getString());
+        formatter.format(inFile, outFile);
         inString.close();
         outString.close();
         inFile.close();
         outFile.close();
-
-
-
-
-
     }
 }

@@ -1,5 +1,5 @@
 /**
- * IReader interface
+ * IReader interface reads from stream
  * FileReader class read of file
  * StringReader class read of string
  */

@@ -1,7 +1,7 @@
 package it.sevenbits.packages.writer;
 
 /**
- *
+ * IWrite interface write in file or in string
  */
 public interface IWriter {
     /**
@@ -16,7 +16,4 @@ public interface IWriter {
      * @throws WriterException exception
      */
     void close() throws WriterException;
-
-
-
 }
